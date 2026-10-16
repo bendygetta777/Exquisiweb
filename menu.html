@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Menú de Exquisi-Web: tacos, burritos, mollettes y extras para tu pre-pedido en línea.">
+  <meta name="author" content="Equipo Exquisi-Web">
+  <title>Menú | Exquisi-Web</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="page page--menu">
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header">
+    <div class="site-header__container">
+      <a href="index.html" class="site-header__brand">
+        <img src="img/logo.png" alt="Logo de Exquisi-Web" class="site-header__logo">
+        <span class="site-header__name">Exquisi-Web</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Navegación principal">
+        <ul class="main-nav__list">
+          <li class="main-nav__item"><a href="index.html" class="main-nav__link">Inicio</a></li>
+          <li class="main-nav__item"><a href="index.html#caracteristicas" class="main-nav__link">Características</a></li>
+          <li class="main-nav__item"><a href="menu.html" class="main-nav__link main-nav__link--active">Menú</a></li>
+          <li class="main-nav__item"><a href="index.html#contacto" class="main-nav__link">Contacto</a></li>
+        </ul>
+        <a href="#tacos" class="main-nav__cta button button--primary">Hacer pre-pedido</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-main">
+
+    <!-- ===== ENCABEZADO DEL MENÚ ===== -->
+    <section class="menu-intro">
+      <div class="menu-intro__container">
+        <h1 class="menu-intro__title">Nuestro menú</h1>
+        <p class="menu-intro__description">
+          Elige tus favoritos y haz tu pre-pedido con hasta 20 minutos de anticipación.
+        </p>
+        <nav class="menu-intro__nav" aria-label="Categorías del menú">
+          <ul class="menu-intro__list">
+            <li class="menu-intro__item"><a href="#tacos" class="menu-intro__link">Tacos</a></li>
+            <li class="menu-intro__item"><a href="#burritos" class="menu-intro__link">Burritos</a></li>
+            <li class="menu-intro__item"><a href="#mollettes" class="menu-intro__link">Mollettes</a></li>
+            <li class="menu-intro__item"><a href="#extras" class="menu-intro__link">Extras</a></li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+
+    <!-- ===== TACOS ===== -->
+    <section id="tacos" class="menu-category">
+      <div class="menu-category__container">
+        <header class="menu-category__header">
+          <h2 class="menu-category__title">Tacos</h2>
+          <p class="menu-category__description">Tortilla recién hecha con tus guisados favoritos.</p>
+        </header>
+        <img src="img/tacos.jpg" alt="Plato de tacos" class="menu-category__image" loading="lazy">
+
+        <ul class="menu-list">
+          <li class="menu-item">
+            <div class="menu-item__info">
+              <h3 class="menu-item__name">Taco de guisado</h3>
+              <p class="menu-item__description">Descripción por definir.</p>
+            </div>
+            <span class="menu-item__price">$00.00</span>
+          </li>
+          <li class="menu-item">
+            <div class="menu-item__info">
+              <h3 class="menu-item__name">Taco de carne</h3>
+              <p class="menu-item__description">Descripción por definir.</p>
+            </div>
+            <span class="menu-item__price">$00.00</span>
+          </li>
+          <li class="menu-item">
+            <div class="menu-item__info">
+              <h3 class="menu-item__name">Orden de tacos</h3>
+              <p class="menu-item__description">Descripción por definir.</p>
+            </div>
+            <span class="menu-item__price">$00.00</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== BURRITOS ===== -->
+    <section id="burritos" class="menu-category">
+      <div class="menu-category__container">
+        <header class="menu-category__header">
+          <h2 class="menu-category__title">Burritos</h2>
+          <p class="menu-category__description">Tortilla de harina bien rellena, ideal para llenarte.</p>
+        </header>
+        <img src="img/burritos.jpg" alt="Burritos" class="menu-category__image" loading="lazy">
+
+        <ul class="menu-list">
+          <li class="menu-item">
+            <div class="menu-item__info">
+              <h3 class="menu-item__name">Burrito sencillo</h3>
+              <p class="menu-item__description">Descripción por definir.</p>
+            </div>
+            <span class="menu-item__price">$00.00</span>
+          </li>
+          <li class="menu-item">
+            <div class="menu-item__info">
+              <h3 class="menu-item__name">Burrito especial</h3>
+              <p class="menu-item__description">Descripción por definir.</p>
+            </div>
+            <span class="menu-item__price">$00.00</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== MOLLETTES ===== -->
+    <section id="mollettes" class="menu-category">
+      <div class="menu-category__container">
+        <header class="menu-category__header">
+          <h2 class="menu-category__title">Mollettes</h2>
+          <p class="menu-category__description">Bolillo con frijoles, queso gratinado y tus ingredientes extra.</p>
+        </header>
+        <img src="img/mollettes.jpg" alt="Mollettes con queso gratinado" class="menu-category__image" loading="lazy">
+
+        <ul class="menu-list">
+          <li class="menu-item">
+            <div class="menu-item__info">
+              <h3 class="menu-item__name">Mollete sencillo</h3>
+              <p class="menu-item__description">Descripción por definir.</p>
+            </div>
+            <span class="menu-item__price">$00.00</span>
+          </li>
+          <li class="menu-item">
+            <div class="menu-item__info">
+              <h3 class="menu-item__name">Mollete especial</h3>
+              <p class="menu-item__description">Descripción por definir.</p>
+            </div>
+            <span class="menu-item__price">$00.00</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== EXTRAS ===== -->
+    <section id="extras" class="menu-category">
+      <div class="menu-category__container">
+        <header class="menu-category__header">
+          <h2 class="menu-category__title">Extras</h2>
+          <p class="menu-category__description">Complementa tu pedido con bebidas y acompañamientos.</p>
+        </header>
+        <img src="img/combo-exquisi.jpg" alt="Platillo de enchiladas con pollo deshebrado" class="menu-category__image" loading="lazy">
+
+        <ul class="menu-list">
+          <li class="menu-item">
+            <div class="menu-item__info">
+              <h3 class="menu-item__name">Bebida</h3>
+              <p class="menu-item__description">Descripción por definir.</p>
+            </div>
+            <span class="menu-item__price">$00.00</span>
+          </li>
+          <li class="menu-item">
+            <div class="menu-item__info">
+              <h3 class="menu-item__name">Acompañamiento</h3>
+              <p class="menu-item__description">Descripción por definir.</p>
+            </div>
+            <span class="menu-item__price">$00.00</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer id="contacto" class="site-footer">
+    <div class="site-footer__container">
+
+      <section class="site-footer__section site-footer__about">
+        <h2 class="site-footer__title">Exquisi-Web</h2>
+        <p class="site-footer__text">Pre-pedidos en línea de tacos, burritos y mollettes.</p>
+      </section>
+
+      <nav class="site-footer__section footer-nav" aria-label="Navegación del pie de página">
+        <h2 class="site-footer__title">Enlaces</h2>
+        <ul class="footer-nav__list">
+          <li class="footer-nav__item"><a href="index.html" class="footer-nav__link">Inicio</a></li>
+          <li class="footer-nav__item"><a href="index.html#caracteristicas" class="footer-nav__link">Características</a></li>
+          <li class="footer-nav__item"><a href="menu.html" class="footer-nav__link">Menú</a></li>
+        </ul>
+      </nav>
+
+      <section class="site-footer__section site-footer__contact">
+        <h2 class="site-footer__title">Contacto</h2>
+        <address class="site-footer__address">
+          <p class="site-footer__text">Dirección: por definir</p>
+          <p class="site-footer__text">Teléfono: <a href="tel:+520000000000" class="site-footer__link">por definir</a></p>
+          <p class="site-footer__text">Correo: <a href="mailto:contacto@exquisiweb.com" class="site-footer__link">contacto@exquisiweb.com</a></p>
+        </address>
+      </section>
+
+    </div>
+
+    <div class="site-footer__bottom">
+      <p class="site-footer__copyright">&copy; 2026 Exquisi-Web. Proyecto escolar ITEL. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

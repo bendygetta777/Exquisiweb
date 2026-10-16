@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Exquisi-Web: haz tu pre-pedido en línea de tacos, burritos, mollettes y extras, y recógelo sin esperar.">
+  <meta name="keywords" content="Exquisi-Web, tacos, burritos, mollettes, pre-pedidos, comida">
+  <meta name="author" content="Equipo Exquisi-Web">
+  <title>Exquisi-Web | Pre-pedidos de tacos, burritos y mollettes</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="page page--home">
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header">
+    <div class="site-header__container">
+      <a href="index.html" class="site-header__brand">
+        <img src="img/logo.png" alt="Logo de Exquisi-Web" class="site-header__logo">
+        <span class="site-header__name">Exquisi-Web</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Navegación principal">
+        <ul class="main-nav__list">
+          <li class="main-nav__item"><a href="#inicio" class="main-nav__link main-nav__link--active">Inicio</a></li>
+          <li class="main-nav__item"><a href="#caracteristicas" class="main-nav__link">Características</a></li>
+          <li class="main-nav__item"><a href="#productos" class="main-nav__link">Menú</a></li>
+          <li class="main-nav__item"><a href="#contacto" class="main-nav__link">Contacto</a></li>
+        </ul>
+        <a href="#productos" class="main-nav__cta button button--primary">Hacer pre-pedido</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-main">
+
+    <!-- ===== HERO ===== -->
+    <section id="inicio" class="hero">
+      <div class="hero__container">
+        <div class="hero__content">
+          <h1 class="hero__title">Tu antojo, listo cuando llegues</h1>
+          <p class="hero__subtitle">
+            Haz tu pre-pedido en línea de tacos, burritos y mollettes con Exquisi-Web
+            y recógelo sin filas ni esperas.
+          </p>
+          <div class="hero__actions">
+            <a href="#productos" class="button button--primary hero__button">Ver menú</a>
+            <a href="#caracteristicas" class="button button--secondary hero__button">¿Cómo funciona?</a>
+          </div>
+        </div>
+        <figure class="hero__figure">
+          <img src="img/combo-exquisi.jpg" alt="Platillo de enchiladas con pollo deshebrado" class="hero__image">
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===== CARACTERÍSTICAS ===== -->
+    <section id="caracteristicas" class="features">
+      <div class="features__container">
+        <header class="features__header">
+          <h2 class="features__title">¿Por qué pedir en Exquisi-Web?</h2>
+          <p class="features__description">Un proceso sencillo para que tu comida esté lista a tiempo.</p>
+        </header>
+
+        <ul class="features__list">
+          <li class="feature-card">
+            <img src="img/icono-pedido.svg" alt="" class="feature-card__icon">
+            <h3 class="feature-card__title">Pre-pedidos en línea</h3>
+            <p class="feature-card__text">Elige tus productos desde el celular o la computadora y programa tu pedido con hasta 20 minutos de anticipación.</p>
+          </li>
+          <li class="feature-card">
+            <img src="img/icono-pago.svg" alt="" class="feature-card__icon">
+            <h3 class="feature-card__title">Pago con comprobante</h3>
+            <p class="feature-card__text">Sube tu comprobante de pago y lo validamos para confirmar tu pedido.</p>
+          </li>
+          <li class="feature-card">
+            <img src="img/icono-mostrador.svg" alt="" class="feature-card__icon">
+            <h3 class="feature-card__title">Atención en mostrador</h3>
+            <p class="feature-card__text">¿Prefieres venir directo? También te atendemos de forma presencial.</p>
+          </li>
+          <li class="feature-card">
+            <img src="img/icono-tiempo.svg" alt="" class="feature-card__icon">
+            <h3 class="feature-card__title">Sin esperas</h3>
+            <p class="feature-card__text">Tu pedido se prepara con anticipación para que lo recojas rápido.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== PRODUCTOS ===== -->
+    <section id="productos" class="products">
+      <div class="products__container">
+        <header class="products__header">
+          <h2 class="products__title">Nuestro menú</h2>
+          <p class="products__description">Conoce lo que preparamos para ti.</p>
+        </header>
+
+        <div class="products__grid">
+          <article class="product-card">
+            <img src="img/tacos.jpg" alt="Plato de tacos" class="product-card__image" loading="lazy">
+            <div class="product-card__body">
+              <h3 class="product-card__title">Tacos</h3>
+              <p class="product-card__text">Tortilla recién hecha con tus guisados favoritos.</p>
+              <a href="#" class="product-card__link button button--secondary">Ver opciones</a>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <img src="img/burritos.jpg" alt="Burritos" class="product-card__image" loading="lazy">
+            <div class="product-card__body">
+              <h3 class="product-card__title">Burritos</h3>
+              <p class="product-card__text">Tortilla de harina bien rellena, ideal para llenarte.</p>
+              <a href="#" class="product-card__link button button--secondary">Ver opciones</a>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <img src="img/mollettes.jpg" alt="Mollettes con queso gratinado" class="product-card__image" loading="lazy">
+            <div class="product-card__body">
+              <h3 class="product-card__title">Mollettes</h3>
+              <p class="product-card__text">Bolillo con frijoles, queso gratinado y tus ingredientes extra.</p>
+              <a href="#" class="product-card__link button button--secondary">Ver opciones</a>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <img src="img/combo-exquisi.jpg" alt="Platillo de enchiladas con pollo deshebrado" class="product-card__image" loading="lazy">
+            <div class="product-card__body">
+              <h3 class="product-card__title">Extras</h3>
+              <p class="product-card__text">Complementa tu pedido con bebidas y acompañamientos.</p>
+              <a href="#" class="product-card__link button button--secondary">Ver opciones</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer id="contacto" class="site-footer">
+    <div class="site-footer__container">
+
+      <section class="site-footer__section site-footer__about">
+        <h2 class="site-footer__title">Exquisi-Web</h2>
+        <p class="site-footer__text">Pre-pedidos en línea de tacos, burritos y mollettes.</p>
+      </section>
+
+      <nav class="site-footer__section footer-nav" aria-label="Navegación del pie de página">
+        <h2 class="site-footer__title">Enlaces</h2>
+        <ul class="footer-nav__list">
+          <li class="footer-nav__item"><a href="#inicio" class="footer-nav__link">Inicio</a></li>
+          <li class="footer-nav__item"><a href="#caracteristicas" class="footer-nav__link">Características</a></li>
+          <li class="footer-nav__item"><a href="#productos" class="footer-nav__link">Menú</a></li>
+        </ul>
+      </nav>
+
+      <section class="site-footer__section site-footer__contact">
+        <h2 class="site-footer__title">Contacto</h2>
+        <address class="site-footer__address">
+          <p class="site-footer__text">Dirección: por definir</p>
+          <p class="site-footer__text">Teléfono: <a href="tel:+520000000000" class="site-footer__link">por definir</a></p>
+          <p class="site-footer__text">Correo: <a href="mailto:contacto@exquisiweb.com" class="site-footer__link">contacto@exquisiweb.com</a></p>
+        </address>
+      </section>
+
+    </div>
+
+    <div class="site-footer__bottom">
+      <p class="site-footer__copyright">&copy; 2026 Exquisi-Web. Proyecto escolar ITEL. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
