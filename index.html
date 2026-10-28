@@ -24,12 +24,38 @@
 
       <nav class="main-nav" aria-label="Navegación principal">
         <ul class="main-nav__list">
+<<<<<<< Updated upstream
           <li class="main-nav__item"><a href="#inicio" class="main-nav__link main-nav__link--active">Inicio</a></li>
           <li class="main-nav__item"><a href="#caracteristicas" class="main-nav__link">Características</a></li>
           <li class="main-nav__item"><a href="#productos" class="main-nav__link">Menú</a></li>
           <li class="main-nav__item"><a href="#contacto" class="main-nav__link">Contacto</a></li>
         </ul>
         <a href="#productos" class="main-nav__cta button button--primary">Hacer pre-pedido</a>
+=======
+          <!-- 
+            CAMBIO: Se actualizó el enlace de Inicio para apuntar explícitamente a "index.html".
+            POR QUÉ: Garantiza una navegación robusta entre páginas independientes en lugar de depender solo de anclas internas (#inicio).
+          -->
+          <li class="main-nav__item"><a href="index.html" class="main-nav__link main-nav__link--active">Inicio</a></li>
+          
+          <li class="main-nav__item"><a href="#caracteristicas" class="main-nav__link">Características</a></li>
+          
+          <!-- 
+            CAMBIO: Se actualizó el enlace de Menú para apuntar a "menu.html".
+            POR QUÉ: Conecta la página principal directamente con la vista del menú dedicada.
+          -->
+          <li class="main-nav__item"><a href="menu.html" class="main-nav__link">Menú</a></li>
+          
+          <li class="main-nav__item"><a href="#contacto" class="main-nav__link">Contacto</a></li>
+
+          <!-- 
+            CAMBIO: Se agregó un nuevo elemento en la lista de navegación para "Login".
+            POR QUÉ: Permite a los usuarios acceder a la nueva estructura de inicio de sesión desde cualquier página principal, cumpliendo con los requerimientos del branch.
+          -->
+          <li class="main-nav__item"><a href="login.html" class="main-nav__link">Login</a></li>
+        </ul>
+        <a href="menu.html" class="main-nav__cta button button--primary">Hacer pre-pedido</a>
+>>>>>>> Stashed changes
       </nav>
     </div>
   </header>
