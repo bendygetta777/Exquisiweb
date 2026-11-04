@@ -24,31 +24,28 @@
 
       <nav class="main-nav" aria-label="Navegación principal">
         <ul class="main-nav__list">
-
-          <li class="main-nav__item"><a href="#inicio" class="main-nav__link main-nav__link--active">Inicio</a></li>
-          <li class="main-nav__item"><a href="#caracteristicas" class="main-nav__link">Características</a></li>
-          <li class="main-nav__item"><a href="#productos" class="main-nav__link">Menú</a></li>
-          <li class="main-nav__item"><a href="#contacto" class="main-nav__link">Contacto</a></li>
-        </ul>
-        <a href="#productos" class="main-nav__cta button button--primary">Hacer pre-pedido</a>
           <!-- 
-          Updated the Home link to point explicitly to "index.html".
+            CHANGE: Updated the Home link to explicitly point to "index.html".
+            WHY: Ensures robust file-to-file navigation instead of depending solely on internal anchor tags.
           -->
           <li class="main-nav__item"><a href="index.html" class="main-nav__link main-nav__link--active">Inicio</a></li>
           
           <li class="main-nav__item"><a href="#caracteristicas" class="main-nav__link">Características</a></li>
           
           <!-- 
-           Updated the Menu link to point to "menu.html".
+            CHANGE: Updated the Menu link to point to "menu.html".
+            WHY: Directly connects the home page view with the dedicated menu page.
           -->
           <li class="main-nav__item"><a href="menu.html" class="main-nav__link">Menú</a></li>
           
           <li class="main-nav__item"><a href="#contacto" class="main-nav__link">Contacto</a></li>
 
           <!-- 
-            Added the "Login" link to the main navigation.
+            CHANGE: Added the "Login" link to the main navigation menu list.
+            WHY: Allows users to seamlessly access the new login page from the home view.
           -->
           <li class="main-nav__item"><a href="login.html" class="main-nav__link">Login</a></li>
+
         </ul>
         <a href="menu.html" class="main-nav__cta button button--primary">Hacer pre-pedido</a>
 
