@@ -1,0 +1,255 @@
+/* the general styles used equally on the css*/
+body
+{
+    background-color: #fff8ee;
+    font-family: 'Bricolage Grotesque', serif;
+    /* a + getting rid of that ugly underline */
+    a
+    {
+        text-decoration: none;
+    }
+}
+/* the up section with all the logos and links*/
+.site-header
+{
+    /* The way that the header is shaped */
+    .site-header__container
+    {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 24px;
+        font-size: 30px; /*size of text in header (general)*/
+    }
+
+    .site-header__brand
+    {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: #c84b19;
+    }
+    /*Image logo */
+    img
+    {
+        width: 200px;
+        height: auto;
+    }
+    /* Justification of the navigation links + color*/
+    .main-nav
+    {
+        display: flex;
+        align-items: center;
+        flex: 1;
+        .main-nav__list
+        {
+            display: flex;
+            gap: 80px;
+            list-style: none;
+            margin: 0 auto;
+            padding: 0;
+        }
+        /*color of the links*/
+        .main-nav__link
+        {
+        color: #211512;
+        }
+    }
+
+    .button--primary
+    {
+        /* button background */
+        background-color: #c84b19;
+        /* Color, and weight of the text*/
+        color: white;
+        font-weight: 700;
+        /* shape of the button*/
+        border: none;
+        border-radius: 8px;
+        padding: 10px 20px;
+        /* Transformation and transition of the button */
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    /* Magical and useful line that separates the header from hero :) */
+    border-bottom: 1px solid #211512;
+    padding-bottom: 20px;
+}
+
+/* The hero section with a brief description*/
+.hero
+{
+    /*Moves the first text a bit away from the left */
+    padding: 56px 24px;
+
+    .hero__container
+    {
+        display: grid; /*columns and rows*/
+        grid-template-columns: 1fr 1fr; /*2 columns of equal width*/
+        align-items: center; 
+    }
+    .hero__title
+    {
+        font-size: 60px;
+        color: #2b1d19;
+    }
+    .hero__subtitle
+    {
+        font-size: 30px;
+        color: #6C625A;
+    }
+    .hero__image
+    {
+        width: 100%; /*This adjusts the image to the column*/
+        height: 800px;
+    }
+    .button--primary
+    {
+        /* Button background */
+        background-color: #FFFFFF;
+        /* Color, and weight of the text*/
+        color: #6C625A;
+        font-weight: 700;
+        /* Shape of the button */
+        border: 2px solid #211512;
+        border-radius: 8px;
+        padding: 10px 20px;
+        /* Transformation and transition of the button */
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .button--secondary
+    {
+        /* button background */
+        background-color: #c84b19;
+        /* Color, and weight of the text*/
+        color: white;
+        font-weight: 700;
+        /* shape of the button*/
+        border: none;
+        border-radius: 8px;
+        padding: 10px 20px;
+        /* Transformation and transition of the button */
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+}
+
+.features
+{
+    .features__list
+    {
+        list-style: none; /*this eliminates the bullet point that looks ugly*/
+        padding: 0;
+    }
+
+    .feature-card__title::before
+    {
+        content: "-"; /* It adds a manual symbol for the list, along with the respective titles*/
+        margin-right: 10px;
+        color: #2b1d19;
+    }
+    /* Same logic as hero */
+    padding: 56px 24px;
+    .features__container
+    {
+        display: grid;
+        grid-template-columns: 1fr 1.5fr;
+        align-items: center;
+    }
+    h2 /*Why question?*/
+    {
+        font-size: 40px;
+        color: #2b1d19;
+    }
+    h3 /*Titles of the list*/
+    {
+        font-size: 40px;
+        color: #2b1d19;
+    }
+    p /*Description of each feature*/
+    {
+        font-size: 25px;
+        color: #6c625a;
+    }
+}
+.products
+{
+    /* Same logic as hero */
+    padding: 56px 24px;
+    .products__container
+    {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .products__grid
+    {
+        display: grid;
+        grid-template-columns: repeat(4,1fr); /*4 columns of the respective foods*/
+        gap: 24px;
+        
+    }
+    .product-card
+    {
+        overflow: hidden; /*This makes sure that the images stay within the card*/
+        display: flex;
+        flex-direction: column;
+    }
+    .product-card__image
+    {
+        width: 100%;                 /* the image fits right up on the card */
+        height: 160px;               /* this keeps the image aligned properly*/
+        object-fit: cover;           /* it cuts the image, yes, but doesn't make it look ugly af*/
+        display: block;
+    }
+
+    .product-card__body /* This adjusts the text inside the card, without it looks cut off*/
+    {
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+    .product-card__text
+    {
+        flex: 1; /* This makes sure that the text takes up all the space it can, and doesn't look ugly*/
+    }
+    h2 /*Our menu section title*/
+    {
+        font-size: 40px;
+        color: #2b1d19;
+    }
+
+    h3 /*title of each food item*/
+    {
+        font-size: 30px;
+        color: #2b1d19;
+    }
+    p /*regular text*/
+    {
+        font-size: 20px;
+        color: #6c625a;
+    }
+    .button--secondary
+    {
+        /* button background */
+        background-color: #c84b19;
+        /* Color, and weight of the text*/
+        color: white;
+        font-weight: 700;
+        /* shape of the button*/
+        border: none;
+        border-radius: 8px;
+        padding: 10px 20px;
+        /* Transformation and transition of the button */
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+}
+/* Bottom section with the juicy copyright */
+.site-footer
+{
+    color: #fff8ee;
+    background-color: #2b1d19;
+}
