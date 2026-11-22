@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Finaliza tu pre-pedido en Exquisi-Web y sube tu comprobante de pago.">
+  <meta name="author" content="Equipo Exquisi-Web">
+  <title>Checkout y Pago | Exquisi-Web</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="page page--checkout">
+
+  <!-- ===== HEADER ===== -->
+  <!--
+    CHANGE: Added main header with navigation links including checkout and order tracking.
+    WHY: Keeps navigation consistent across all pages of the cafeteria workflow.
+  -->
+  <header class="site-header">
+    <div class="site-header__container">
+      <a href="index.html" class="site-header__brand">
+        <img src="img/logo.png" alt="Logo de Exquisi-Web" class="site-header__logo">
+        <span class="site-header__name">Exquisi-Web</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Navegación principal">
+        <ul class="main-nav__list">
+          <li class="main-nav__item"><a href="index.html" class="main-nav__link">Inicio</a></li>
+          <li class="main-nav__item"><a href="menu.html" class="main-nav__link">Menú</a></li>
+          <li class="main-nav__item"><a href="orders.html" class="main-nav__link">Mis Pedidos</a></li>
+          <li class="main-nav__item"><a href="admin.html" class="main-nav__link">Admin</a></li>
+          <li class="main-nav__item"><a href="login.html" class="main-nav__link">Login</a></li>
+        </ul>
+        <a href="checkout.html" class="main-nav__cta button button--primary">Checkout</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main class="site-main">
+    <section class="checkout">
+      <div class="checkout__container">
+        <header class="checkout__header">
+          <h1 class="checkout__title">Finalizar Pre-pedido</h1>
+          <p class="checkout__description">Revisa tus productos seleccionados, elige tu método de pago y confirma tu orden.</p>
+        </header>
+
+        <div class="checkout__grid">
+          <!--
+            CHANGE: Created order summary panel showing selected items and total amount.
+            WHY: Lets customers verify their pre-order before submitting payment details.
+          -->
+          <aside class="checkout__summary" aria-label="Resumen del pedido">
+            <h2 class="checkout__subtitle">Resumen de tu pedido</h2>
+            <ul class="checkout__items">
+              <li class="checkout__item">
+                <span>2x Tacos de guisado</span>
+                <strong>$60.00 MXN</strong>
+              </li>
+              <li class="checkout__item">
+                <span>1x Burrito especial</span>
+                <strong>$55.00 MXN</strong>
+              </li>
+              <li class="checkout__item">
+                <span>1x Mollettes gratinados</span>
+                <strong>$45.00 MXN</strong>
+              </li>
+            </ul>
+            <div class="checkout__total">
+              <span>Total a pagar</span>
+              <strong>$160.00 MXN</strong>
+            </div>
+          </aside>
+
+          <!--
+            CHANGE: Added payment form with cash/transfer options and 5-minute transfer receipt notice.
+            WHY: Fulfills checkout acceptance criteria for payment methods and receipt upload window.
+          -->
+          <form class="checkout__form" action="orders.html" method="GET">
+            <fieldset class="checkout__fieldset">
+              <legend class="checkout__legend">Método de pago</legend>
+
+              <label class="checkout__radio-option">
+                <input type="radio" name="payment_method" value="efectivo" required>
+                <span>Efectivo en barra (pagas al recoger)</span>
+              </label>
+
+              <label class="checkout__radio-option">
+                <input type="radio" name="payment_method" value="transferencia" checked required>
+                <span>Transferencia bancaria</span>
+              </label>
+            </fieldset>
+
+            <div class="checkout__notice" role="note">
+              <strong>Importante (ventana de 5 minutos):</strong> Si eliges transferencia, sube tu comprobante dentro de los primeros <strong>5 minutos</strong> posteriores a realizar tu pre-pedido para evitar la cancelación automática.
+            </div>
+
+            <div class="checkout__group">
+              <label for="receipt" class="checkout__label">Comprobante de transferencia (imagen o PDF)</label>
+              <input type="file" id="receipt" name="receipt" accept="image/*,.pdf" class="checkout__input">
+            </div>
+
+            <div class="checkout__actions">
+              <button type="submit" class="button button--primary checkout__submit">Confirmar pre-pedido</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer id="contacto" class="site-footer">
+    <div class="site-footer__container">
+      <section class="site-footer__section site-footer__about">
+        <h2 class="site-footer__title">Exquisi-Web</h2>
+        <p class="site-footer__text">Pre-pedidos en línea de tacos, burritos y mollettes.</p>
+      </section>
+
+      <nav class="site-footer__section footer-nav" aria-label="Navegación del pie de página">
+        <h2 class="site-footer__title">Enlaces</h2>
+        <ul class="footer-nav__list">
+          <li class="footer-nav__item"><a href="index.html" class="footer-nav__link">Inicio</a></li>
+          <li class="footer-nav__item"><a href="menu.html" class="footer-nav__link">Menú</a></li>
+          <li class="footer-nav__item"><a href="orders.html" class="footer-nav__link">Seguimiento</a></li>
+          <li class="footer-nav__item"><a href="admin.html" class="footer-nav__link">Admin</a></li>
+        </ul>
+      </nav>
+
+      <section class="site-footer__section site-footer__contact">
+        <h2 class="site-footer__title">Contacto</h2>
+        <address class="site-footer__address">
+          <p class="site-footer__text">Cafetería Escolar ITEL</p>
+          <p class="site-footer__text">Correo: <a href="mailto:contacto@exquisiweb.com" class="site-footer__link">contacto@exquisiweb.com</a></p>
+        </address>
+      </section>
+    </div>
+
+    <div class="site-footer__bottom">
+      <p class="site-footer__copyright">&copy; 2026 Exquisi-Web. Proyecto escolar ITEL. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
