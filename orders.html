@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Consulta el estado de tu pre-pedido en Exquisi-Web.">
+  <meta name="author" content="Equipo Exquisi-Web">
+  <title>Seguimiento de Pedido | Exquisi-Web</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="page page--orders">
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header">
+    <div class="site-header__container">
+      <a href="index.html" class="site-header__brand">
+        <img src="img/logo.png" alt="Logo de Exquisi-Web" class="site-header__logo">
+        <span class="site-header__name">Exquisi-Web</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Navegación principal">
+        <ul class="main-nav__list">
+          <li class="main-nav__item"><a href="index.html" class="main-nav__link">Inicio</a></li>
+          <li class="main-nav__item"><a href="menu.html" class="main-nav__link">Menú</a></li>
+          <li class="main-nav__item"><a href="orders.html" class="main-nav__link main-nav__link--active">Mis Pedidos</a></li>
+          <li class="main-nav__item"><a href="login.html" class="main-nav__link">Login</a></li>
+        </ul>
+        <a href="menu.html" class="main-nav__cta button button--primary">Hacer pre-pedido</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main class="site-main">
+    <section class="orders">
+      <div class="orders__container">
+        <header class="orders__header">
+          <h1 class="orders__title">Seguimiento de tu Pre-pedido</h1>
+          <p class="orders__description">Consulta en qué etapa se encuentra tu orden para recogerla a tiempo.</p>
+        </header>
+
+        <!--
+          CHANGE: Added order progress card displaying current status steps.
+          WHY: Lets students track pre-order progress from pending to ready for pickup.
+        -->
+        <article class="orders__card" aria-label="Estado del pedido EXQ-101">
+          <div class="orders__top">
+            <div>
+              <h2 class="orders__folio">Pedido #EXQ-101</h2>
+              <p class="orders__meta">2x Tacos de guisado, 1x Burrito especial — Total: $115.00 MXN</p>
+            </div>
+            <span class="orders__status orders__status--active">En preparación</span>
+          </div>
+
+          <ol class="orders__steps">
+            <li class="orders__step orders__step--done">Pendiente / Comprobante recibido</li>
+            <li class="orders__step orders__step--current">En preparación</li>
+            <li class="orders__step">Listo para recoger</li>
+          </ol>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer id="contacto" class="site-footer">
+    <div class="site-footer__container">
+      <section class="site-footer__section site-footer__about">
+        <h2 class="site-footer__title">Exquisi-Web</h2>
+        <p class="site-footer__text">Pre-pedidos en línea de tacos, burritos y mollettes.</p>
+      </section>
+
+      <nav class="site-footer__section footer-nav" aria-label="Navegación del pie de página">
+        <h2 class="site-footer__title">Enlaces</h2>
+        <ul class="footer-nav__list">
+          <li class="footer-nav__item"><a href="index.html" class="footer-nav__link">Inicio</a></li>
+          <li class="footer-nav__item"><a href="menu.html" class="footer-nav__link">Menú</a></li>
+          <li class="footer-nav__item"><a href="checkout.html" class="footer-nav__link">Checkout</a></li>
+        </ul>
+      </nav>
+
+      <section class="site-footer__section site-footer__contact">
+        <h2 class="site-footer__title">Contacto</h2>
+        <address class="site-footer__address">
+          <p class="site-footer__text">Cafetería Escolar ITEL</p>
+          <p class="site-footer__text">Correo: <a href="mailto:contacto@exquisiweb.com" class="site-footer__link">contacto@exquisiweb.com</a></p>
+        </address>
+      </section>
+    </div>
+
+    <div class="site-footer__bottom">
+      <p class="site-footer__copyright">&copy; 2026 Exquisi-Web. Proyecto escolar ITEL. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
