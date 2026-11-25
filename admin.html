@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Panel de administración de Exquisi-Web para gestionar pedidos, comprobantes y menú.">
+  <meta name="author" content="Equipo Exquisi-Web">
+  <title>Panel de Cafetería | Exquisi-Web</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="page page--admin">
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header">
+    <div class="site-header__container">
+      <a href="index.html" class="site-header__brand">
+        <img src="img/logo.png" alt="Logo de Exquisi-Web" class="site-header__logo">
+        <span class="site-header__name">Exquisi-Web</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Navegación principal">
+        <ul class="main-nav__list">
+          <li class="main-nav__item"><a href="index.html" class="main-nav__link">Inicio</a></li>
+          <li class="main-nav__item"><a href="menu.html" class="main-nav__link">Menú</a></li>
+          <li class="main-nav__item"><a href="orders.html" class="main-nav__link">Pedidos</a></li>
+          <li class="main-nav__item"><a href="admin.html" class="main-nav__link main-nav__link--active">Admin</a></li>
+        </ul>
+        <a href="menu.html" class="main-nav__cta button button--secondary">Ver menú público</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main class="site-main">
+    <section class="admin">
+      <div class="admin__container">
+        <header class="admin__header">
+          <h1 class="admin__title">Panel de Administración — Cafetería</h1>
+          <p class="admin__description">Revisa comprobantes de transferencia, actualiza el estado de las órdenes y administra el menú.</p>
+        </header>
+
+        <!--
+          CHANGE: Added orders and receipt review table with status controls.
+          WHY: Enables cafeteria staff to verify payments, approve orders, and update preparation stages.
+        -->
+        <section class="admin__section" aria-labelledby="pedidos-admin-title">
+          <h2 id="pedidos-admin-title" class="admin__subtitle">Pre-órdenes entrantes</h2>
+
+          <div class="admin__table-wrapper">
+            <table class="admin__table">
+              <thead>
+                <tr>
+                  <th>Folio</th>
+                  <th>Alumno</th>
+                  <th>Detalle</th>
+                  <th>Comprobante</th>
+                  <th>Estado</th>
+                  <th>Acción</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>#EXQ-101</td>
+                  <td>Juan Pérez</td>
+                  <td>2x Tacos, 1x Burrito ($115)</td>
+                  <td><a href="#comprobante-101" class="admin__link">Ver comprobante</a></td>
+                  <td>
+                    <select class="admin__select" aria-label="Estado del pedido EXQ-101">
+                      <option value="pendiente" selected>Pendiente</option>
+                      <option value="preparacion">En preparación</option>
+                      <option value="listo">Listo</option>
+                    </select>
+                  </td>
+                  <td>
+                    <button type="button" class="button button--primary admin__btn-small">Aprobar</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>#EXQ-102</td>
+                  <td>Luis Martínez</td>
+                  <td>1x Mollettes, 1x Agua ($65)</td>
+                  <td><span class="admin__badge">Efectivo en barra</span></td>
+                  <td>
+                    <select class="admin__select" aria-label="Estado del pedido EXQ-102">
+                      <option value="pendiente">Pendiente</option>
+                      <option value="preparacion" selected>En preparación</option>
+                      <option value="listo">Listo</option>
+                    </select>
+                  </td>
+                  <td>
+                    <button type="button" class="button button--secondary admin__btn-small">Actualizar</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!--
+          CHANGE: Added menu management form to add or toggle offerings.
+          WHY: Supports cafeteria staff in keeping menu items and availability up to date.
+        -->
+        <section class="admin__section" aria-labelledby="menu-admin-title">
+          <h2 id="menu-admin-title" class="admin__subtitle">Gestión de menú</h2>
+
+          <form class="admin__menu-form" action="menu.html" method="GET">
+            <div class="admin__form-row">
+              <div class="admin__group">
+                <label for="dish-name" class="admin__label">Nombre del platillo</label>
+                <input type="text" id="dish-name" name="dish_name" class="admin__input" placeholder="Ej. Mollettes con chorizo" required>
+              </div>
+
+              <div class="admin__group">
+                <label for="dish-price" class="admin__label">Precio (MXN)</label>
+                <input type="number" id="dish-price" name="dish_price" min="1" step="0.5" class="admin__input" placeholder="45" required>
+              </div>
+
+              <div class="admin__group">
+                <label for="dish-status" class="admin__label">Disponibilidad</label>
+                <select id="dish-status" name="dish_status" class="admin__select">
+                  <option value="disponible" selected>Disponible</option>
+                  <option value="agotado">Agotado</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="admin__actions">
+              <button type="submit" class="button button--primary">Guardar platillo</button>
+            </div>
+          </form>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer id="contacto" class="site-footer">
+    <div class="site-footer__container">
+      <section class="site-footer__section site-footer__about">
+        <h2 class="site-footer__title">Exquisi-Web</h2>
+        <p class="site-footer__text">Pre-pedidos en línea de tacos, burritos y mollettes.</p>
+      </section>
+
+      <nav class="site-footer__section footer-nav" aria-label="Navegación del pie de página">
+        <h2 class="site-footer__title">Enlaces</h2>
+        <ul class="footer-nav__list">
+          <li class="footer-nav__item"><a href="index.html" class="footer-nav__link">Inicio</a></li>
+          <li class="footer-nav__item"><a href="menu.html" class="footer-nav__link">Menú</a></li>
+          <li class="footer-nav__item"><a href="orders.html" class="footer-nav__link">Seguimiento</a></li>
+          <li class="footer-nav__item"><a href="checkout.html" class="footer-nav__link">Checkout</a></li>
+        </ul>
+      </nav>
+
+      <section class="site-footer__section site-footer__contact">
+        <h2 class="site-footer__title">Contacto</h2>
+        <address class="site-footer__address">
+          <p class="site-footer__text">Cafetería Escolar ITEL</p>
+          <p class="site-footer__text">Correo: <a href="mailto:contacto@exquisiweb.com" class="site-footer__link">contacto@exquisiweb.com</a></p>
+        </address>
+      </section>
+    </div>
+
+    <div class="site-footer__bottom">
+      <p class="site-footer__copyright">&copy; 2026 Exquisi-Web. Proyecto escolar ITEL. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
