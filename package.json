@@ -1,0 +1,13 @@
+{
+  "name": "exquisiweb",
+  "version": "1.0.0",
+  "description": "Web application for online pre-orders and counter sales",
+  "type": "module",
+  "scripts": {
+    "test:db": "node -e \"import('./src/config/db.js').then((m) => m.verifyConnection())\""
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "mysql2": "^3.11.0"
+  }
+}
